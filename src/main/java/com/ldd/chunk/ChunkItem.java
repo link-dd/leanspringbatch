@@ -37,7 +37,7 @@ public class ChunkItem {
             if (times>0){
                 System.out.println("Item Reader -->");
                 times--;
-                return "read return";
+                return "read return"+times;
             }
           else {
               return null;
@@ -49,7 +49,7 @@ public class ChunkItem {
     public ItemProcessor<String,String> itemProcessor(){
         return item->{
             System.out.println("Item Processor -->");
-            return "process-ret" + item;
+            return "process-ret-" + item;
         };
     }
     @Bean
